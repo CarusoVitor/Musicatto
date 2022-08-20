@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class MusicPlayerTests {
     @Test
-    void FakeTest_AlwaysFalse(){
+    public void FakeTest_AlwaysFalse(){
         Assertions.assertFalse(false);
     }
 }

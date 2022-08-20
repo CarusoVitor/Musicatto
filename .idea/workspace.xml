@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be954a76-65cd-4a6e-a775-73c3c502cb66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Interface/InterfaceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicTests/MusicPlayerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokenReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/IMusicToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/NoteToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicTests/MusicTokenReaderTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Musicatto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Musicatto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicDecoderTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicDecoderTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicPlayerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicPlayerTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicPlayerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicPlayerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +56,11 @@
     "last_opened_file_path": "C:/Users/leohe/Downloads/jfugue-5.0.9.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MusicTokenReaderTests.convertNoteToMusicSheet">
     <configuration name="MusicPlayerTests.FakeTest_AlwaysFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Musicatto" />
       <extension name="coverage">
@@ -75,8 +77,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MusicTokenReaderTests.convertNoteToMusicSheet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Musicatto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MusicTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MusicTests" />
+      <option name="MAIN_CLASS_NAME" value="MusicTests.MusicTokenReaderTests" />
+      <option name="METHOD_NAME" value="convertNoteToMusicSheet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MusicTokenReaderTests.convertNoteToMusicSheet" />
         <item itemvalue="JUnit.MusicPlayerTests.FakeTest_AlwaysFalse" />
       </list>
     </recent_temporary>
