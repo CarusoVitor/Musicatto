@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be954a76-65cd-4a6e-a775-73c3c502cb66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interface/InterfaceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicTests/MusicPlayerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Musicatto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Musicatto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,6 +44,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path": "C:\\Users\\leohe\\Documents\\Faculdade\\Técnicas de Construção de Programas\\Trabalho Prático\\Musicatto\\.idea\\libraries",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
@@ -44,6 +58,29 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="MusicPlayerTests.FakeTest_AlwaysFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Musicatto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MusicTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MusicTests" />
+      <option name="MAIN_CLASS_NAME" value="MusicTests.MusicPlayerTests" />
+      <option name="METHOD_NAME" value="FakeTest_AlwaysFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MusicPlayerTests.FakeTest_AlwaysFalse" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
