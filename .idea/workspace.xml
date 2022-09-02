@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be954a76-65cd-4a6e-a775-73c3c502cb66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/annotations-20.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/RestToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Musicatto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Musicatto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokens/IMusicToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokens/IMusicToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokens/NoteToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokens/NoteToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/IMusicToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/IMusicToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicTokenReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokenReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
