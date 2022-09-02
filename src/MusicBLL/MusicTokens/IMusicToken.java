@@ -1,7 +1,7 @@
 package MusicBLL.MusicTokens;
 
-import MusicBLL.MusicStatus;
+import MusicBLL.MusicStatusController;
 
 public interface IMusicToken {
-    public String toMusicSheet(MusicStatus currentMusicStatus);
+    public String toMusicSheet(MusicStatusController currentMusicStatus);
 }

@@ -1,18 +1,18 @@
 package MusicTests;
 
-import MusicBLL.MusicStatus;
+import MusicBLL.MusicStatusController;
 import MusicBLL.MusicTokens.IMusicToken;
 import MusicBLL.MusicTokens.NoteToken;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class MusicTokenReaderTests {
-    private static MusicStatus musicStatus;
+public class MusicTokensTests {
+    private static MusicStatusController musicStatus;
 
     @BeforeAll
     static void init(){
-        musicStatus = new MusicStatus(4, 16, 18, 90);
+        musicStatus = new MusicStatusController(4, 16, 18, 90);
     }
 
     @Test

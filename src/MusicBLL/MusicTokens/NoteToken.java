@@ -1,6 +1,6 @@
 package MusicBLL.MusicTokens;
 
-import MusicBLL.MusicStatus;
+import MusicBLL.MusicStatusController;
 
 public class NoteToken implements IMusicToken {
     private String note;
@@ -9,7 +9,7 @@ public class NoteToken implements IMusicToken {
         this.note = note;
     }
 
-    public String toMusicSheet(MusicStatus currentMusicStatus){
+    public String toMusicSheet(MusicStatusController currentMusicStatus){
         return (note + String.valueOf(currentMusicStatus.getCurrentOctave()));
     }
 }
