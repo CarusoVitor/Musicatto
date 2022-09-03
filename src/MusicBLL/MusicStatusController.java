@@ -1,6 +1,12 @@
 package MusicBLL;
 
 public class MusicStatusController {
+    public final int MAX_INSTRUMENT = 127;
+    public final int MIN_INSTRUMENT = 0;
+    public final int MAX_VOLUME = 127;
+    public final int MIN_VOLUME = 0;
+
+
     private int currentOctave;
     private int currentVolume;
     private int currentInstrument;
@@ -17,23 +23,32 @@ public class MusicStatusController {
         return currentOctave;
     }
 
-    public void setCurrentOctave(short currentOctave) {
-        this.currentOctave = currentOctave;
+    public void setCurrentOctave(int octave) {
+        this.currentOctave = octave;
     }
 
     public int getCurrentVolume() {
         return currentVolume;
     }
 
-    public void setCurrentVolume(short currentVolume) {
-        this.currentVolume = currentVolume;
+    public void setCurrentVolume(int volume) {
+        if (isValidVolume(volume))
+            this.currentVolume = volume;
+    }
+
+    private boolean isValidVolume(int volume){
+        return volume <= MAX_VOLUME && volume >= MIN_VOLUME;
     }
 
     public int getCurrentInstrument() {
         return currentInstrument;
     }
 
-    public void setCurrentInstrument(short currentInstrument) {
-        this.currentInstrument = currentInstrument;
+    public void setCurrentInstrument(int instrument) {
+        if (isValidInstrument(instrument))
+            this.currentInstrument = instrument;
+    }
+    private boolean isValidInstrument(int instrument){
+        return instrument <= MAX_INSTRUMENT && instrument >= MIN_INSTRUMENT;
     }
 }
