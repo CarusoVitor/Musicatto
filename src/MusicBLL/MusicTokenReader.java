@@ -4,6 +4,8 @@ import MusicBLL.MusicTokens.IMusicToken;
 import MusicBLL.MusicTokens.NoteToken;
 import MusicBLL.MusicTokens.RestToken;
 
+import javax.lang.model.type.ErrorType;
+
 public class MusicTokenReader {
     private String input;
     private int currentIndex;
@@ -15,8 +17,20 @@ public class MusicTokenReader {
         currentIndex = 0;
     }
 
+    public boolean hasRemainingTokens(){
+        return currentIndex < input.length();
+    }
+
     public IMusicToken getNextToken(){
-        String token = input.substring(currentIndex, currentIndex + 1);
+        String token;
+        if(hasRemainingTokens()){
+            token = input.substring(currentIndex, currentIndex + 1);
+            currentIndex++;
+        }
+        else{
+            throw new StringIndexOutOfBoundsException();
+        }
+
         switch(token){
             case "A", "B", "C", "D", "E", "F", "G":
                 lastToken =  new NoteToken(token);

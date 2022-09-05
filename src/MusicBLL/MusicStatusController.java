@@ -36,10 +36,6 @@ public class MusicStatusController {
             this.currentVolume = volume;
     }
 
-    private boolean isValidVolume(int volume){
-        return volume <= MAX_VOLUME && volume >= MIN_VOLUME;
-    }
-
     public int getCurrentInstrument() {
         return currentInstrument;
     }
@@ -48,6 +44,11 @@ public class MusicStatusController {
         if (isValidInstrument(instrument))
             this.currentInstrument = instrument;
     }
+
+    private boolean isValidVolume(int volume){
+        return volume <= MAX_VOLUME && volume >= MIN_VOLUME;
+    }
+
     private boolean isValidInstrument(int instrument){
         return instrument <= MAX_INSTRUMENT && instrument >= MIN_INSTRUMENT;
     }

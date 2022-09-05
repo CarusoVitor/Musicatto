@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be954a76-65cd-4a6e-a775-73c3c502cb66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/jfugue-5.0.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokens/InstrumentToken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokens/RestToken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/InstrumentToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicStatusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicStatusController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokenReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokenReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicTokensTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicTokensTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicStatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicTokensTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicTokensTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicTokenReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokenReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/InstrumentToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/InstrumentToken.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
