@@ -23,6 +23,13 @@ public class MusicStatusController {
         this.currentOctave = octave;
     }
 
+    public void increaseCurrentOctave() {
+        if (currentOctave + 1 <= MusicConstraints.OctaveMaxValue)
+            currentOctave += 1;
+        else
+            currentOctave = MusicConstraints.OctaveDefaultValue;
+    }
+
     public int getCurrentVolume() {
         return currentVolume;
     }
@@ -52,6 +59,4 @@ public class MusicStatusController {
     private boolean isValidInstrument(int instrument){
         return instrument <= MusicConstraints.InstrumentMaxCode && instrument >= MusicConstraints.InstrumentMinCode;
     }
-
-
 }

@@ -61,6 +61,10 @@ public class MusicTokenReader {
                 lastToken = new InstrumentToken(InstrumentsMidiCode.ChurchOrgan);
                 return lastToken;
 
+            case "?":
+                lastToken = new OctaveToken();
+                return lastToken;
+
             default:
                 if(lastToken instanceof NoteToken) {
                     NoteToken lastNote = (NoteToken)lastToken;
