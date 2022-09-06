@@ -1,12 +1,8 @@
 package MusicBLL;
 
+import MusicBLL.MusicConstants.MusicConstraints;
+
 public class MusicStatusController {
-    public final int MAX_INSTRUMENT = 127;
-    public final int MIN_INSTRUMENT = 0;
-    public final int MAX_VOLUME = 127;
-    public final int MIN_VOLUME = 0;
-
-
     private int currentOctave;
     private int currentVolume;
     private int currentInstrument;
@@ -46,10 +42,10 @@ public class MusicStatusController {
     }
 
     private boolean isValidVolume(int volume){
-        return volume <= MAX_VOLUME && volume >= MIN_VOLUME;
+        return volume <= MusicConstraints.InstrumentMaxCode && volume >= MusicConstraints.InstrumentMinCode;
     }
 
     private boolean isValidInstrument(int instrument){
-        return instrument <= MAX_INSTRUMENT && instrument >= MIN_INSTRUMENT;
+        return instrument <= MusicConstraints.InstrumentMaxCode && instrument >= MusicConstraints.InstrumentMinCode;
     }
 }

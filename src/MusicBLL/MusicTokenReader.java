@@ -1,10 +1,10 @@
 package MusicBLL;
 
+import MusicBLL.MusicConstants.InstrumentsMidiCode;
 import MusicBLL.MusicTokens.IMusicToken;
+import MusicBLL.MusicTokens.InstrumentToken;
 import MusicBLL.MusicTokens.NoteToken;
 import MusicBLL.MusicTokens.RestToken;
-
-import javax.lang.model.type.ErrorType;
 
 public class MusicTokenReader {
     private String input;
@@ -21,7 +21,7 @@ public class MusicTokenReader {
         return currentIndex < input.length();
     }
 
-    public IMusicToken getNextToken(){
+    public IMusicToken getNextToken(MusicStatusController musicStatus){
         String token;
         if(hasRemainingTokens()){
             token = input.substring(currentIndex, currentIndex + 1);
@@ -33,7 +33,31 @@ public class MusicTokenReader {
 
         switch(token){
             case "A", "B", "C", "D", "E", "F", "G":
-                lastToken =  new NoteToken(token);
+                lastToken = new NoteToken(token);
+                return lastToken;
+
+            case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
+                lastToken = new InstrumentToken(musicStatus.getCurrentInstrument() + Integer.parseInt(token));
+                return lastToken;
+
+            case "i", "I", "o", "O", "u", "U":
+                lastToken = new InstrumentToken(InstrumentsMidiCode.Harpsichord);
+                return lastToken;
+
+            case "!":
+                lastToken = new InstrumentToken(InstrumentsMidiCode.Agogo);
+                return lastToken;
+
+            case "\n":
+                lastToken = new InstrumentToken(InstrumentsMidiCode.TubularBells);
+                return lastToken;
+
+            case ";":
+                lastToken = new InstrumentToken(InstrumentsMidiCode.PanFlute);
+                return lastToken;
+
+            case ",":
+                lastToken = new InstrumentToken(InstrumentsMidiCode.ChurchOrgan);
                 return lastToken;
 
             default:

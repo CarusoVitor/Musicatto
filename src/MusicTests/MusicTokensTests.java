@@ -34,9 +34,16 @@ public class MusicTokensTests {
         Assertions.assertEquals(16, musicStatus.getCurrentInstrument());
     }
     @Test
-    public void testInstrumentOutOfRange(){
+    public void testInstrumentOutOfRange_1(){
         IMusicToken instrument = new InstrumentToken(150);
-        Assertions.assertNotEquals("I[150]", instrument.toMusicSheet(musicStatus));
-        Assertions.assertNotEquals(150, musicStatus.getCurrentInstrument());
+        Assertions.assertEquals("I[18]", instrument.toMusicSheet(musicStatus));
+        Assertions.assertEquals(18, musicStatus.getCurrentInstrument());
+    }
+
+    @Test
+    public void testInstrumentOutOfRange_2(){
+        IMusicToken instrument = new InstrumentToken(-5);
+        Assertions.assertEquals("I[18]", instrument.toMusicSheet(musicStatus));
+        Assertions.assertEquals(18, musicStatus.getCurrentInstrument());
     }
 }
