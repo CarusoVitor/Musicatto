@@ -1,5 +1,6 @@
 package MusicTests;
 
+import MusicBLL.MusicConstants.MusicConstraints;
 import MusicBLL.MusicStatusController;
 import MusicBLL.MusicTokens.IMusicToken;
 import MusicBLL.MusicTokens.InstrumentToken;
@@ -14,13 +15,13 @@ public class MusicTokensTests {
 
     @BeforeAll
     static void init(){
-        musicStatus = new MusicStatusController(4, 16, 18, 90);
+        musicStatus = new MusicStatusController(MusicConstraints.OctaveDefaultValue, MusicConstraints.VolumeDefaultValue, 18, 90);
     }
 
     @Test
     public void testConvertNoteToMusicSheet(){
         IMusicToken note = new NoteToken("A");
-        Assertions.assertEquals("A4", note.toMusicSheet(musicStatus));
+        Assertions.assertEquals("A5", note.toMusicSheet(musicStatus));
     }
     @Test
     public void testConvertRestToMusicSheet(){
