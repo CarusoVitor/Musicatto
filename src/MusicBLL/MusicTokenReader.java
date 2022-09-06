@@ -1,10 +1,7 @@
 package MusicBLL;
 
 import MusicBLL.MusicConstants.InstrumentsMidiCode;
-import MusicBLL.MusicTokens.IMusicToken;
-import MusicBLL.MusicTokens.InstrumentToken;
-import MusicBLL.MusicTokens.NoteToken;
-import MusicBLL.MusicTokens.RestToken;
+import MusicBLL.MusicTokens.*;
 
 public class MusicTokenReader {
     private String input;
@@ -34,6 +31,10 @@ public class MusicTokenReader {
         switch(token){
             case "A", "B", "C", "D", "E", "F", "G":
                 lastToken = new NoteToken(token);
+                return lastToken;
+
+            case " ":
+                lastToken = new VolumeToken();
                 return lastToken;
 
             case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":

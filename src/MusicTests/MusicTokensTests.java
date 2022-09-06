@@ -2,10 +2,7 @@ package MusicTests;
 
 import MusicBLL.MusicConstants.MusicConstraints;
 import MusicBLL.MusicStatusController;
-import MusicBLL.MusicTokens.IMusicToken;
-import MusicBLL.MusicTokens.InstrumentToken;
-import MusicBLL.MusicTokens.NoteToken;
-import MusicBLL.MusicTokens.RestToken;
+import MusicBLL.MusicTokens.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -46,5 +43,20 @@ public class MusicTokensTests {
         IMusicToken instrument = new InstrumentToken(-5);
         Assertions.assertEquals("I[18]", instrument.toMusicSheet(musicStatus));
         Assertions.assertEquals(18, musicStatus.getCurrentInstrument());
+    }
+
+    @Test
+    public void testConvertVolumeToken(){
+        IMusicToken volume = new VolumeToken();
+        Assertions.assertEquals(":CE(Volume,2000)", volume.toMusicSheet(musicStatus));
+        Assertions.assertEquals(2000, musicStatus.getCurrentVolume());
+        Assertions.assertEquals(":CE(Volume,4000)", volume.toMusicSheet(musicStatus));
+        Assertions.assertEquals(4000, musicStatus.getCurrentVolume());
+        Assertions.assertEquals(":CE(Volume,8000)", volume.toMusicSheet(musicStatus));
+        Assertions.assertEquals(8000, musicStatus.getCurrentVolume());
+        Assertions.assertEquals(":CE(Volume,16000)", volume.toMusicSheet(musicStatus));
+        Assertions.assertEquals(16000, musicStatus.getCurrentVolume());
+        Assertions.assertEquals(":CE(Volume,1000)", volume.toMusicSheet(musicStatus));
+        Assertions.assertEquals(1000, musicStatus.getCurrentVolume());
     }
 }

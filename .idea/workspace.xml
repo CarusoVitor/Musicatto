@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be954a76-65cd-4a6e-a775-73c3c502cb66" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/VolumeToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/MusicConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/MusicConstraints.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicStatusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicStatusController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicTokensTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicTokensTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicConstants/MusicConstraints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicConstants/MusicConstraints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/IMusicToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/IMusicToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicTokensTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicTokensTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +65,6 @@
   }
 }</component>
   <component name="RunManager" selected="JUnit.MusicTokensTests">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Musicatto" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MusicTokensTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Musicatto" />
       <extension name="coverage">
@@ -80,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MusicTokensTests.testInstrumentOutOfRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MusicTokensTests.testConvertVolumeToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Musicatto" />
       <extension name="coverage">
         <pattern>
@@ -90,13 +90,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="MusicTests" />
       <option name="MAIN_CLASS_NAME" value="MusicTests.MusicTokensTests" />
-      <option name="METHOD_NAME" value="testInstrumentOutOfRange" />
+      <option name="METHOD_NAME" value="testConvertVolumeToken" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MusicTokensTests.testInstrumentOutOfRange_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MusicTokensTests.testConvertVolumeToken_DoubleValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Musicatto" />
       <extension name="coverage">
         <pattern>
@@ -106,7 +106,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="MusicTests" />
       <option name="MAIN_CLASS_NAME" value="MusicTests.MusicTokensTests" />
-      <option name="METHOD_NAME" value="testInstrumentOutOfRange_1" />
+      <option name="METHOD_NAME" value="testConvertVolumeToken_DoubleValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MusicTokensTests.testConvertVolumeToken_ReturnToDefault" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Musicatto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MusicTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MusicTests" />
+      <option name="MAIN_CLASS_NAME" value="MusicTests.MusicTokensTests" />
+      <option name="METHOD_NAME" value="testConvertVolumeToken_ReturnToDefault" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,10 +147,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MusicTokensTests" />
+        <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken" />
+        <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken_ReturnToDefault" />
+        <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken_DoubleValue" />
         <item itemvalue="JUnit.MusicTokensTests.testInstrumentOutOfRange_2" />
-        <item itemvalue="JUnit.MusicTokensTests.testInstrumentOutOfRange_1" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MusicTokensTests.testInstrumentOutOfRange" />
       </list>
     </recent_temporary>
   </component>

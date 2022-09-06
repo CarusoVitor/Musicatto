@@ -27,9 +27,13 @@ public class MusicStatusController {
         return currentVolume;
     }
 
-    public void setCurrentVolume(int volume) {
-        if (isValidVolume(volume))
-            this.currentVolume = volume;
+    public void DoubleVolume() {
+        int doubleVolume = getCurrentVolume() * 2;
+
+        if (isValidVolume(doubleVolume))
+            this.currentVolume = doubleVolume;
+        else
+            this.currentVolume = MusicConstraints.VolumeDefaultValue;
     }
 
     public int getCurrentInstrument() {
@@ -42,10 +46,12 @@ public class MusicStatusController {
     }
 
     private boolean isValidVolume(int volume){
-        return volume <= MusicConstraints.InstrumentMaxCode && volume >= MusicConstraints.InstrumentMinCode;
+        return volume <= MusicConstraints.VolumeMaxValue && volume >= MusicConstraints.VolumeMinValue;
     }
 
     private boolean isValidInstrument(int instrument){
         return instrument <= MusicConstraints.InstrumentMaxCode && instrument >= MusicConstraints.InstrumentMinCode;
     }
+
+
 }
