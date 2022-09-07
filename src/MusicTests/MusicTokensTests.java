@@ -4,14 +4,14 @@ import MusicBLL.MusicConstants.MusicConstraints;
 import MusicBLL.MusicStatusController;
 import MusicBLL.MusicTokens.*;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MusicTokensTests {
     private static MusicStatusController musicStatus;
 
-    @BeforeAll
-    static void init(){
+    @BeforeEach
+    public void init(){
         musicStatus = new MusicStatusController(MusicConstraints.OctaveDefaultValue, MusicConstraints.VolumeDefaultValue, 18, 90);
     }
 

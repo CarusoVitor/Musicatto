@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="be954a76-65cd-4a6e-a775-73c3c502cb66" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicConstants/MusicConstraints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicConstants/MusicConstraints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/MusicConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/MusicConstraints.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicStatusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicStatusController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicDecoderTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicDecoderTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicPlayerTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicTokensTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicTokensTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicStatusController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicPlayerTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicTokensTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicTokensTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,29 +45,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\leohe\\Documents\\Faculdade\\Técnicas de Construção de Programas\\Trabalho Prático\\Musicatto\\.idea\\libraries&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/UFRGS/Técnicas de Construção de Programas/Musicatto&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Groovy compiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path": "C:\\Users\\leohe\\Documents\\Faculdade\\Técnicas de Construção de Programas\\Trabalho Prático\\Musicatto\\.idea\\libraries",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "D:/UFRGS/Técnicas de Construção de Programas/Musicatto",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.MusicTokensTests">
+}]]></component>
+  <component name="RunManager" selected="JUnit.MusicDecoderTests">
+    <configuration name="MusicDecoderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Musicatto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MusicTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MusicTests" />
+      <option name="MAIN_CLASS_NAME" value="MusicTests.MusicDecoderTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MusicTokensTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Musicatto" />
       <extension name="coverage">
@@ -125,29 +146,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MusicTokensTests.testInstrumentOutOfRange_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Musicatto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MusicTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="MusicTests" />
-      <option name="MAIN_CLASS_NAME" value="MusicTests.MusicTokensTests" />
-      <option name="METHOD_NAME" value="testInstrumentOutOfRange_2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MusicDecoderTests" />
         <item itemvalue="JUnit.MusicTokensTests" />
         <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken" />
         <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken_ReturnToDefault" />
         <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken_DoubleValue" />
-        <item itemvalue="JUnit.MusicTokensTests.testInstrumentOutOfRange_2" />
       </list>
     </recent_temporary>
   </component>

@@ -6,7 +6,7 @@ public class MusicStatusController {
     private int currentOctave;
     private int currentVolume;
     private int currentInstrument;
-    private int currentBpm;       // no enunciado, nenhum token muda isso, mas talvez o usuário possa escolher na hora de escrever o texto?
+    private final int currentBpm;       // no enunciado, nenhum token muda isso, mas talvez o usuário possa escolher na hora de escrever o texto?
 
     public MusicStatusController(int octave, int volume, int instrument, int bpm){
         currentOctave = octave;
@@ -27,22 +27,26 @@ public class MusicStatusController {
 
     public void increaseCurrentOctave() {
         if (currentOctave + 1 <= MusicConstraints.OctaveMaxValue)
-            currentOctave += 1;
+            setCurrentOctave(currentOctave + 1);
         else
-            currentOctave = MusicConstraints.OctaveDefaultValue;
+            setCurrentOctave(MusicConstraints.OctaveDefaultValue);
     }
 
     public int getCurrentVolume() {
         return currentVolume;
     }
 
+    private void setCurrentVolume(int volume) {
+        this.currentVolume = volume;
+    }
+
     public void DoubleVolume() {
         int doubleVolume = getCurrentVolume() * 2;
 
         if (isValidVolume(doubleVolume))
-            this.currentVolume = doubleVolume;
+            setCurrentVolume(doubleVolume);
         else
-            this.currentVolume = MusicConstraints.VolumeDefaultValue;
+            setCurrentVolume(MusicConstraints.VolumeDefaultValue);
     }
 
     public int getCurrentInstrument() {
