@@ -10,11 +10,6 @@ import java.io.File;
 import java.io.IOException;
 
 public class MusicPlayer {
-    private final String musicSheet;
-
-    public MusicPlayer(String musicSheet){
-        this.musicSheet = musicSheet;
-    }
 // WIP
 //    private InstructionPreprocessor initInstructionPreprocessor(){
 //        InstructionPreprocessor instructionPreprocessor = InstructionPreprocessor.getInstance();
@@ -25,12 +20,12 @@ public class MusicPlayer {
 //        return instructionPreprocessor;
 //    }
 
-    public void play(){
+    public static void play(String musicSheet){
         Player player = new Player();
         player.play(musicSheet);
     }
 
-    public void record(String filePath){
+    public static void record(String musicSheet, String filePath){
         try {
             File file = new File(filePath);
             Pattern pattern = new Pattern(musicSheet);
