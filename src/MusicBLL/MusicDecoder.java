@@ -1,8 +1,8 @@
 package MusicBLL;
 
-
 import MusicBLL.MusicConstants.MusicConstraints;
 import MusicBLL.MusicTokens.IMusicToken;
+import org.jfugue.midi.MidiDictionary;
 
 
 public class MusicDecoder {
@@ -14,10 +14,14 @@ public class MusicDecoder {
                 MusicConstraints.BPMDefaultValue
         );
     }
+//
+//    public void setStatusController(MusicStatusController statusController){
+//        this.statusController = statusController;
+//    }
 
     private static String initMusicSheet(MusicStatusController statusController){
-        String startingInstrument = String.format("I[%d]", statusController.getCurrentInstrument());
-        String startingBPM = String.format("T[%d]", statusController.getCurrentBpm());
+        String startingInstrument = String.format("I[%s]", MidiDictionary.INSTRUMENT_BYTE_TO_STRING.get((byte)statusController.getCurrentInstrument()));
+        String startingBPM = String.format("T%d", statusController.getCurrentBpm());
         String startingVolume = String.format(":CE(Volume,%d)", statusController.getCurrentVolume());
         return startingBPM + " " + startingVolume + " " + startingInstrument + " ";
     }

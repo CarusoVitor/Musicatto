@@ -1,6 +1,7 @@
 package MusicBLL.MusicTokens;
 
 import MusicBLL.MusicStatusController;
+import org.jfugue.midi.MidiDictionary;
 
 public class InstrumentToken implements IMusicToken{
     private final int instrument;
@@ -11,6 +12,7 @@ public class InstrumentToken implements IMusicToken{
 
     public String toMusicSheet(MusicStatusController currentMusicStatus) {
         currentMusicStatus.setCurrentInstrument(instrument);
-        return String.format("I[%d]", currentMusicStatus.getCurrentInstrument());
+        String instrumentString = MidiDictionary.INSTRUMENT_BYTE_TO_STRING.get((byte)currentMusicStatus.getCurrentInstrument());
+        return String.format("I[%s]", instrumentString);
     }
 }

@@ -6,7 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="be954a76-65cd-4a6e-a775-73c3c502cb66" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/Interface/InterfaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/Interface/InterfaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/InstrumentsMidiCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/MusicConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/MusicConstraints.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokenReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokenReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokens/InstrumentToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicTokens/InstrumentToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicDecoderTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicDecoderTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface/InterfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/InterfaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicConstants/InstrumentsMidiCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicConstants/MusicConstraints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicConstants/MusicConstraints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicDecoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicTokenReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokenReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/InstrumentToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicTokens/InstrumentToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +68,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -62,13 +80,29 @@
       <module name="Musicatto" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MusicTests.*" />
+          <option name="PATTERN" value="Interface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="MusicTests" />
       <option name="MAIN_CLASS_NAME" value="MusicTests.MusicDecoderTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MusicDecoderTests.testChangeInstrumentDigitOutOfBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Musicatto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MusicTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MusicTests" />
+      <option name="MAIN_CLASS_NAME" value="MusicTests.MusicDecoderTests" />
+      <option name="METHOD_NAME" value="testChangeInstrumentDigitOutOfBounds" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,22 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MusicTokensTests.testConvertVolumeToken_DoubleValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Musicatto" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MusicTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="MusicTests" />
-      <option name="MAIN_CLASS_NAME" value="MusicTests.MusicTokensTests" />
-      <option name="METHOD_NAME" value="testConvertVolumeToken_DoubleValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MusicTokensTests.testConvertVolumeToken_ReturnToDefault" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Musicatto" />
       <extension name="coverage">
@@ -139,10 +157,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MusicTokensTests" />
+        <item itemvalue="JUnit.MusicDecoderTests.testChangeInstrumentDigitOutOfBounds" />
+        <item itemvalue="JUnit.MusicDecoderTests" />
         <item itemvalue="JUnit.MusicDecoderTests" />
         <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken" />
-        <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken_ReturnToDefault" />
-        <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken_DoubleValue" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +174,14 @@
       <updated>1660954356674</updated>
       <workItem from="1662125523853" duration="3667000" />
       <workItem from="1662141466112" duration="2054000" />
-      <workItem from="1662215437125" duration="6302000" />
+      <workItem from="1662215437125" duration="8375000" />
+      <workItem from="1662306439664" duration="570000" />
+      <workItem from="1662427246791" duration="829000" />
+      <workItem from="1662494325141" duration="16367000" />
+      <workItem from="1662565515713" duration="3026000" />
+      <workItem from="1662568675586" duration="271000" />
+      <workItem from="1662572334772" duration="75000" />
+      <workItem from="1662577798270" duration="1899000" />
     </task>
     <servers />
   </component>

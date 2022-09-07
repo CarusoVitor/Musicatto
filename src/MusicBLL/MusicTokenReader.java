@@ -1,7 +1,7 @@
 package MusicBLL;
 
-import MusicBLL.MusicConstants.InstrumentsMidiCode;
 import MusicBLL.MusicTokens.*;
+import org.jfugue.midi.MidiDictionary;
 
 public class MusicTokenReader {
     private final String input;
@@ -42,23 +42,23 @@ public class MusicTokenReader {
                 return lastToken;
 
             case "i", "I", "o", "O", "u", "U":
-                lastToken = new InstrumentToken(InstrumentsMidiCode.Harpsichord);
+                lastToken = new InstrumentToken((int) MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get("HARPSICHORD"));
                 return lastToken;
 
             case "!":
-                lastToken = new InstrumentToken(InstrumentsMidiCode.Agogo);
+                lastToken = new InstrumentToken((int) MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get("AGOGO"));
                 return lastToken;
 
             case "\n":
-                lastToken = new InstrumentToken(InstrumentsMidiCode.TubularBells);
+                lastToken = new InstrumentToken((int) MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get("TUBULAR_BELLS"));
                 return lastToken;
 
             case ";":
-                lastToken = new InstrumentToken(InstrumentsMidiCode.PanFlute);
+                lastToken = new InstrumentToken((int) MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get("PAN_FLUTE"));
                 return lastToken;
 
             case ",":
-                lastToken = new InstrumentToken(InstrumentsMidiCode.ChurchOrgan);
+                lastToken = new InstrumentToken((int) MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get("CHURCH_ORGAN"));
                 return lastToken;
 
             case "?":

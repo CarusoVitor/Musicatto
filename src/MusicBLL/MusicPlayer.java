@@ -30,7 +30,8 @@ public class MusicPlayer {
             File file = new File(filePath);
             Pattern pattern = new Pattern(musicSheet);
             MidiFileManager.savePatternToMidi(pattern, file);
-        } catch (IOException ex) {
+        }
+        catch (IOException ex) {
             ex.printStackTrace();
         }
     }
