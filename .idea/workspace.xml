@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="be954a76-65cd-4a6e-a775-73c3c502cb66" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/MusicConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicConstants/MusicConstraints.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicDecoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicStatusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicBLL/MusicStatusController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicDecoderTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicDecoderTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicPlayerTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicTokensTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Musicatto/MusicTests/MusicTokensTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicBLL/MusicDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicBLL/MusicDecoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicDecoderTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicPlayerTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicTests/MusicTokensTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicTests/MusicTokensTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +58,7 @@
     "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MusicDecoderTests">
+  <component name="RunManager" selected="JUnit.MusicTokensTests">
     <configuration name="MusicDecoderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Musicatto" />
       <extension name="coverage">
@@ -148,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MusicDecoderTests" />
         <item itemvalue="JUnit.MusicTokensTests" />
+        <item itemvalue="JUnit.MusicDecoderTests" />
         <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken" />
         <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken_ReturnToDefault" />
         <item itemvalue="JUnit.MusicTokensTests.testConvertVolumeToken_DoubleValue" />

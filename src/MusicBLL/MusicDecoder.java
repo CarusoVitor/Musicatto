@@ -6,26 +6,27 @@ import MusicBLL.MusicTokens.IMusicToken;
 
 
 public class MusicDecoder {
-    private MusicStatusController statusController;
-
-    public MusicDecoder(MusicStatusController statusController){
-        this.statusController = statusController;
+    private static MusicStatusController getDefaultMusicStatusController(){
+        return new MusicStatusController(
+                MusicConstraints.OctaveDefaultValue,
+                MusicConstraints.VolumeDefaultValue,
+                MusicConstraints.InstrumentDefaultCode,
+                MusicConstraints.BPMDefaultValue
+        );
     }
 
-    public void setStatusController(MusicStatusController statusController){
-        this.statusController = statusController;
-    }
-
-    private String initMusicSheet(){
+    private static String initMusicSheet(MusicStatusController statusController){
         String startingInstrument = String.format("I[%d]", statusController.getCurrentInstrument());
         String startingBPM = String.format("T[%d]", statusController.getCurrentBpm());
         String startingVolume = String.format(":CE(Volume,%d)", statusController.getCurrentVolume());
         return startingBPM + " " + startingVolume + " " + startingInstrument + " ";
     }
 
-    public String decode(String inputString){
+    public static String decode(String inputString){
+        MusicStatusController statusController = getDefaultMusicStatusController();
+        StringBuilder musicSheet = new StringBuilder(initMusicSheet(statusController));
+
         MusicTokenReader tokenReader = new MusicTokenReader(inputString);
-        StringBuilder musicSheet = new StringBuilder(initMusicSheet());
 
         while (tokenReader.hasRemainingTokens()){
             IMusicToken token = tokenReader.getNextToken(statusController);
