@@ -15,6 +15,8 @@ public class MusicStatusController {
         currentBpm = bpm;
     }
 
+    public int getCurrentBpm() { return currentBpm; }
+
     public int getCurrentOctave(){
         return currentOctave;
     }

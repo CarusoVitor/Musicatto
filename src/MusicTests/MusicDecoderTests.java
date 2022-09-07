@@ -1,13 +1,27 @@
 package MusicTests;
 
+import MusicBLL.MusicConstants.MusicConstraints;
 import MusicBLL.MusicDecoder;
+import MusicBLL.MusicStatusController;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import MusicBLL.MusicConstants.InstrumentsMidiCode;
 
 public class MusicDecoderTests {
-    private final MusicDecoder musicDecoder = new MusicDecoder();
+    private static MusicDecoder musicDecoder;
 
+    @BeforeAll
+    static void init(){
+        musicDecoder = new MusicDecoder(
+                new MusicStatusController(
+                        MusicConstraints.OctaveDefaultValue,
+                        MusicConstraints.VolumeDefaultValue,
+                        MusicConstraints.InstrumentDefaultCode,
+                        MusicConstraints.BPMDefaultValue
+                )
+        );
+    }
 
     @Test
     public void testChangeInstrumentToAgogo(){
@@ -87,7 +101,4 @@ public class MusicDecoderTests {
         String musicSheet = musicDecoder.decode("A[]-");
         Assertions.assertEquals(musicSheet, "T[120] :CE(Volume,1000) I[0] A5 A5 R R");
     }
-
-
-
 }

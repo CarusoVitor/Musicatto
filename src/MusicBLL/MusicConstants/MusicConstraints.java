@@ -10,5 +10,5 @@ public class MusicConstraints {
     public static final int OctaveMinValue = 0;
     public static final int OctaveMaxValue = 10;
     public static final int OctaveDefaultValue = 5;
-    public static final int BPMDefaultCode = 120;
+    public static final int BPMDefaultValue = 120;
 }

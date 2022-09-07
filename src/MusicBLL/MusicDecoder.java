@@ -6,29 +6,30 @@ import MusicBLL.MusicTokens.IMusicToken;
 
 
 public class MusicDecoder {
+    private MusicStatusController statusController;
+
+    public MusicDecoder(MusicStatusController statusController){
+        this.statusController = statusController;
+    }
+
+    public void setStatusController(MusicStatusController statusController){
+        this.statusController = statusController;
+    }
 
     private String initMusicSheet(){
-        String startingInstrument = String.format("I[%d]", MusicConstraints.InstrumentDefaultCode);
-        String startingBPM = String.format("T[%d]", MusicConstraints.BPMDefaultCode);
-        String startingVolume = String.format(":CE(Volume,%d)", MusicConstraints.VolumeDefaultValue);
+        String startingInstrument = String.format("I[%d]", statusController.getCurrentInstrument());
+        String startingBPM = String.format("T[%d]", statusController.getCurrentBpm());
+        String startingVolume = String.format(":CE(Volume,%d)", statusController.getCurrentVolume());
         return startingBPM + " " + startingVolume + " " + startingInstrument + " ";
     }
 
     public String decode(String inputString){
-        MusicStatusController statusController = new MusicStatusController(
-                MusicConstraints.OctaveDefaultValue,
-                MusicConstraints.VolumeDefaultValue,
-                MusicConstraints.InstrumentDefaultCode,
-                MusicConstraints.BPMDefaultCode);
-
         MusicTokenReader tokenReader = new MusicTokenReader(inputString);
-        IMusicToken token;
         StringBuilder musicSheet = new StringBuilder(initMusicSheet());
 
         while (tokenReader.hasRemainingTokens()){
-            String convertedToken;
-            token = tokenReader.getNextToken(statusController);
-            convertedToken = token.toMusicSheet(statusController);
+            IMusicToken token = tokenReader.getNextToken(statusController);
+            String convertedToken = token.toMusicSheet(statusController);
 
             if (convertedToken != null) {
                 musicSheet.append(convertedToken);
