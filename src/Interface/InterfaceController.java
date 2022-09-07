@@ -18,10 +18,5 @@ public class InterfaceController {
 
         String musicSheet = MusicDecoder.decode(inputString);
         MusicPlayer.play(musicSheet);
-
-
-
-
-
     }
 }

@@ -6,16 +6,12 @@ public class MusicStatusController {
     private int currentOctave;
     private int currentVolume;
     private int currentInstrument;
-    private final int currentBpm;       // no enunciado, nenhum token muda isso, mas talvez o usuário possa escolher na hora de escrever o texto?
 
-    public MusicStatusController(int octave, int volume, int instrument, int bpm){
+    public MusicStatusController(int octave, int volume, int instrument){
         currentOctave = octave;
         currentVolume = volume;
         currentInstrument = instrument;
-        currentBpm = bpm;
     }
-
-    public int getCurrentBpm() { return currentBpm; }
 
     public int getCurrentOctave(){
         return currentOctave;

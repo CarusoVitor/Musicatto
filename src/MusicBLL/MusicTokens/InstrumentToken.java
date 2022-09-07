@@ -12,7 +12,9 @@ public class InstrumentToken implements IMusicToken{
 
     public String toMusicSheet(MusicStatusController currentMusicStatus) {
         currentMusicStatus.setCurrentInstrument(instrument);
-        String instrumentString = MidiDictionary.INSTRUMENT_BYTE_TO_STRING.get((byte)currentMusicStatus.getCurrentInstrument());
+
+        byte instrumentByteCode = (byte)currentMusicStatus.getCurrentInstrument();
+        String instrumentString = MidiDictionary.INSTRUMENT_BYTE_TO_STRING.get(instrumentByteCode);
         return String.format("I[%s]", instrumentString);
     }
 }

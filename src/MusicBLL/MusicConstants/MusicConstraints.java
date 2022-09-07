@@ -9,5 +9,4 @@ public class MusicConstraints {
     public static final int VolumeDefaultValue = 5000;
     public static final int OctaveMaxValue = 10;
     public static final int OctaveDefaultValue = 5;
-    public static final int BPMDefaultValue = 120;
 }

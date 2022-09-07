@@ -2,22 +2,15 @@ package MusicBLL;
 
 import MusicBLL.MusicConstants.MusicConstraints;
 import MusicBLL.MusicTokens.IMusicToken;
-import org.jfugue.midi.MidiDictionary;
-
 
 public class MusicDecoder {
     private static MusicStatusController getDefaultMusicStatusController(){
         return new MusicStatusController(
                 MusicConstraints.OctaveDefaultValue,
                 MusicConstraints.VolumeDefaultValue,
-                MusicConstraints.InstrumentDefaultCode,
-                MusicConstraints.BPMDefaultValue
+                MusicConstraints.InstrumentDefaultCode
         );
     }
-//
-//    public void setStatusController(MusicStatusController statusController){
-//        this.statusController = statusController;
-//    }
 
     private static String initMusicSheet(MusicStatusController statusController){
         String startingVolume = String.format(":CE(935,%d)", statusController.getCurrentVolume());

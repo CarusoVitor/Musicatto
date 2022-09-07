@@ -12,7 +12,10 @@ public class MusicTokensTests {
 
     @BeforeEach
     public void init(){
-        musicStatus = new MusicStatusController(MusicConstraints.OctaveDefaultValue, MusicConstraints.VolumeDefaultValue, 18, 90);
+        musicStatus = new MusicStatusController(
+                MusicConstraints.OctaveDefaultValue,
+                MusicConstraints.VolumeDefaultValue,
+                MusicConstraints.InstrumentDefaultCode);
     }
 
     @Test
@@ -32,17 +35,17 @@ public class MusicTokensTests {
         Assertions.assertEquals(16, musicStatus.getCurrentInstrument());
     }
     @Test
-    public void testInstrumentOutOfRange_1(){
+    public void testInstrumentOutOfRange_Positive(){
         IMusicToken instrument = new InstrumentToken(150);
-        Assertions.assertEquals("I[Rock_Organ]", instrument.toMusicSheet(musicStatus));
-        Assertions.assertEquals(18, musicStatus.getCurrentInstrument());
+        Assertions.assertEquals("I[Piano]", instrument.toMusicSheet(musicStatus));
+        Assertions.assertEquals(MusicConstraints.InstrumentDefaultCode, musicStatus.getCurrentInstrument());
     }
 
     @Test
-    public void testInstrumentOutOfRange_2(){
+    public void testInstrumentOutOfRange_Negative(){
         IMusicToken instrument = new InstrumentToken(-5);
-        Assertions.assertEquals("I[Rock_Organ]", instrument.toMusicSheet(musicStatus));
-        Assertions.assertEquals(18, musicStatus.getCurrentInstrument());
+        Assertions.assertEquals("I[Piano]", instrument.toMusicSheet(musicStatus));
+        Assertions.assertEquals(MusicConstraints.InstrumentDefaultCode, musicStatus.getCurrentInstrument());
     }
 
     @Test
