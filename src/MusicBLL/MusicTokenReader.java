@@ -4,7 +4,7 @@ import MusicBLL.MusicConstants.InstrumentsMidiCode;
 import MusicBLL.MusicTokens.*;
 
 public class MusicTokenReader {
-    private String input;
+    private final String input;
     private int currentIndex;
 
     private IMusicToken lastToken;
@@ -66,8 +66,7 @@ public class MusicTokenReader {
                 return lastToken;
 
             default:
-                if(lastToken instanceof NoteToken) {
-                    NoteToken lastNote = (NoteToken)lastToken;
+                if(lastToken instanceof NoteToken lastNote) {
                     lastToken = new RestToken();
                     return lastNote;
                 }
