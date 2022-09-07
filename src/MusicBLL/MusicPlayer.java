@@ -1,6 +1,13 @@
 package MusicBLL;
 
+import org.jfugue.midi.MidiFileManager;
+import org.jfugue.pattern.Pattern;
 import org.jfugue.player.Player;
+import org.staccato.Instruction;
+import org.staccato.InstructionPreprocessor;
+
+import java.io.File;
+import java.io.IOException;
 
 public class MusicPlayer {
     private final String musicSheet;
@@ -12,7 +19,7 @@ public class MusicPlayer {
 //    private InstructionPreprocessor initInstructionPreprocessor(){
 //        InstructionPreprocessor instructionPreprocessor = InstructionPreprocessor.getInstance();
 //
-//        instructionPreprocessor.addInstruction("set volume to", new Instruction.LastIsValue(":CE(7, $)"));
+//        instructionPreprocessor.addInstruction("set volume to", new Instruction.LastIsValue(":CON(935,$)"));
 //        instructionPreprocessor.addInstruction("change instrument to", new Instruction.LastIsValue("I[$]"));
 //
 //        return instructionPreprocessor;
@@ -21,5 +28,15 @@ public class MusicPlayer {
     public void play(){
         Player player = new Player();
         player.play(musicSheet);
+    }
+
+    public void record(String filePath){
+        try {
+            File file = new File(filePath);
+            Pattern pattern = new Pattern(musicSheet);
+            MidiFileManager.savePatternToMidi(pattern, file);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 }

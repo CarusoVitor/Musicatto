@@ -1,6 +1,7 @@
 package MusicTests;
 
 import MusicBLL.MusicConstants.MusicConstraints;
+import MusicBLL.MusicDecoder;
 import MusicBLL.MusicStatusController;
 import MusicBLL.MusicTokens.*;
 import org.junit.jupiter.api.Assertions;
@@ -58,5 +59,20 @@ public class MusicTokensTests {
         Assertions.assertEquals(16000, musicStatus.getCurrentVolume());
         Assertions.assertEquals(":CE(Volume,1000)", volume.toMusicSheet(musicStatus));
         Assertions.assertEquals(1000, musicStatus.getCurrentVolume());
+    }
+
+    @Test
+    public void testIncreaseOctave(){
+        IMusicToken octave = new OctaveToken();
+        Assertions.assertNull(octave.toMusicSheet(musicStatus));
+        Assertions.assertEquals(6, musicStatus.getCurrentOctave());
+    }
+
+    @Test
+    public void testOctavePassedUpperBound(){
+        IMusicToken octave = new OctaveToken();
+        for (int i = 0; i < 6; i++)
+            octave.toMusicSheet(musicStatus);
+        Assertions.assertEquals(MusicConstraints.OctaveDefaultValue, musicStatus.getCurrentOctave());
     }
 }
