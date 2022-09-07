@@ -20,10 +20,8 @@ public class MusicDecoder {
 //    }
 
     private static String initMusicSheet(MusicStatusController statusController){
-        String startingInstrument = String.format("I[%s]", MidiDictionary.INSTRUMENT_BYTE_TO_STRING.get((byte)statusController.getCurrentInstrument()));
-        String startingBPM = String.format("T%d", statusController.getCurrentBpm());
-        String startingVolume = String.format(":CE(Volume,%d)", statusController.getCurrentVolume());
-        return startingBPM + " " + startingVolume + " " + startingInstrument + " ";
+        String startingVolume = String.format(":CE(935,%d)", statusController.getCurrentVolume());
+        return startingVolume + " ";
     }
 
     public static String decode(String inputString){

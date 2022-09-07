@@ -48,16 +48,10 @@ public class MusicTokensTests {
     @Test
     public void testConvertVolumeToken(){
         IMusicToken volume = new VolumeToken();
-        Assertions.assertEquals(":CE(Volume,2000)", volume.toMusicSheet(musicStatus));
-        Assertions.assertEquals(2000, musicStatus.getCurrentVolume());
-        Assertions.assertEquals(":CE(Volume,4000)", volume.toMusicSheet(musicStatus));
-        Assertions.assertEquals(4000, musicStatus.getCurrentVolume());
-        Assertions.assertEquals(":CE(Volume,8000)", volume.toMusicSheet(musicStatus));
-        Assertions.assertEquals(8000, musicStatus.getCurrentVolume());
-        Assertions.assertEquals(":CE(Volume,16000)", volume.toMusicSheet(musicStatus));
-        Assertions.assertEquals(16000, musicStatus.getCurrentVolume());
-        Assertions.assertEquals(":CE(Volume,1000)", volume.toMusicSheet(musicStatus));
-        Assertions.assertEquals(1000, musicStatus.getCurrentVolume());
+        Assertions.assertEquals(":CE(935,10000)", volume.toMusicSheet(musicStatus));
+        Assertions.assertEquals(10000, musicStatus.getCurrentVolume());
+        Assertions.assertEquals(":CE(935,5000)", volume.toMusicSheet(musicStatus));
+        Assertions.assertEquals(5000, musicStatus.getCurrentVolume());
     }
 
     @Test
