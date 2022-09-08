@@ -12,7 +12,7 @@ public class MusicPlayer {
         player.play(musicSheet);
     }
 
-    public static void record(String musicSheet, String filePath){
+    public static void download(String musicSheet, String filePath){
         try {
             File file = new File(filePath);
             Pattern pattern = new Pattern(musicSheet);
