@@ -25,16 +25,22 @@ public class UserInterfaceController {
     public void onDownloadButtonClicked() {
         String inputString = textArea.getText();
         String musicSheet = MusicDecoder.decode(inputString);
-        MusicPlayer.download(musicSheet, "test.midi");
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("MIDI files", "*.mid"));
+        File file = fileChooser.showSaveDialog(null);
+        if (file != null) {
+            MusicPlayer.download(musicSheet, file.getAbsolutePath());
+        }
     }
 
     @FXML
     public void onUploadButtonClicked() throws IOException{
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
-        File f = fileChooser.showOpenDialog(null);
-        if (f != null) {
-            Path filePath = Path.of(f.getAbsolutePath());
+        File file = fileChooser.showOpenDialog(null);
+        if (file != null) {
+            Path filePath = Path.of(file.getAbsolutePath());
             String newInputString = Files.readString(filePath);
             String inputStringTextArea = textArea.getText();
             textArea.setText(inputStringTextArea + newInputString);
