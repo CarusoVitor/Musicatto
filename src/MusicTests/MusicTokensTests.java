@@ -51,11 +51,16 @@ public class MusicTokensTests {
     @Test
     public void testConvertVolumeToken(){
         IMusicToken volume = new VolumeToken();
-        Assertions.assertEquals(":CE(935,10000)", volume.toMusicSheet(musicStatus));
-        Assertions.assertEquals(10000, musicStatus.getCurrentVolume());
-        Assertions.assertEquals(":CE(935,5000)", volume.toMusicSheet(musicStatus));
-        Assertions.assertEquals(5000, musicStatus.getCurrentVolume());
+        Assertions.assertEquals(String.format(":CE(935,%d)", MusicConstants.VolumeDefaultValue*2), volume.toMusicSheet(musicStatus));
+        Assertions.assertEquals(MusicConstants.VolumeDefaultValue*2, musicStatus.getCurrentVolume());
     }
+
+//    @Test
+//    public void testResetVolumeToken(){
+//        IMusicToken volume = new VolumeToken();
+//        Assertions.assertEquals(String.format(":CE(935,%d)", MusicConstants.VolumeDefaultValue*2), volume.toMusicSheet(musicStatus));
+//        Assertions.assertEquals(MusicConstants.VolumeDefaultValue*2, musicStatus.getCurrentVolume());
+//    }
 
     @Test
     public void testIncreaseOctave(){

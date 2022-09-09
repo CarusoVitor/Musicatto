@@ -15,7 +15,7 @@ public class MusicStatusController {
         return currentOctave;
     }
 
-    public void setCurrentOctave(int octave) {
+    private void setCurrentOctave(int octave) {
         this.currentOctave = octave;
     }
 
