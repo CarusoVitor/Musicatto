@@ -1,6 +1,6 @@
 package MusicTests;
 
-import MusicBLL.MusicConstants.MusicConstraints;
+import MusicBLL.MusicConstants;
 import MusicBLL.MusicStatusController;
 import MusicBLL.MusicTokens.*;
 import org.junit.jupiter.api.Assertions;
@@ -13,9 +13,9 @@ public class MusicTokensTests {
     @BeforeEach
     public void init(){
         musicStatus = new MusicStatusController(
-                MusicConstraints.OctaveDefaultValue,
-                MusicConstraints.VolumeDefaultValue,
-                MusicConstraints.InstrumentDefaultCode);
+                MusicConstants.OctaveDefaultValue,
+                MusicConstants.VolumeDefaultValue,
+                MusicConstants.InstrumentDefaultCode);
     }
 
     @Test
@@ -38,14 +38,14 @@ public class MusicTokensTests {
     public void testInstrumentOutOfRange_Positive(){
         IMusicToken instrument = new InstrumentToken(150);
         Assertions.assertEquals("I[Piano]", instrument.toMusicSheet(musicStatus));
-        Assertions.assertEquals(MusicConstraints.InstrumentDefaultCode, musicStatus.getCurrentInstrument());
+        Assertions.assertEquals(MusicConstants.InstrumentDefaultCode, musicStatus.getCurrentInstrument());
     }
 
     @Test
     public void testInstrumentOutOfRange_Negative(){
         IMusicToken instrument = new InstrumentToken(-5);
         Assertions.assertEquals("I[Piano]", instrument.toMusicSheet(musicStatus));
-        Assertions.assertEquals(MusicConstraints.InstrumentDefaultCode, musicStatus.getCurrentInstrument());
+        Assertions.assertEquals(MusicConstants.InstrumentDefaultCode, musicStatus.getCurrentInstrument());
     }
 
     @Test
@@ -69,6 +69,6 @@ public class MusicTokensTests {
         IMusicToken octave = new OctaveToken();
         for (int i = 0; i < 6; i++)
             octave.toMusicSheet(musicStatus);
-        Assertions.assertEquals(MusicConstraints.OctaveDefaultValue, musicStatus.getCurrentOctave());
+        Assertions.assertEquals(MusicConstants.OctaveDefaultValue, musicStatus.getCurrentOctave());
     }
 }

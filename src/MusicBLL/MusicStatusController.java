@@ -1,7 +1,5 @@
 package MusicBLL;
 
-import MusicBLL.MusicConstants.MusicConstraints;
-
 public class MusicStatusController {
     private int currentOctave;
     private int currentVolume;
@@ -22,10 +20,10 @@ public class MusicStatusController {
     }
 
     public void increaseCurrentOctave() {
-        if (currentOctave + 1 <= MusicConstraints.OctaveMaxValue)
+        if (currentOctave + 1 <= MusicConstants.OctaveMaxValue)
             setCurrentOctave(currentOctave + 1);
         else
-            setCurrentOctave(MusicConstraints.OctaveDefaultValue);
+            setCurrentOctave(MusicConstants.OctaveDefaultValue);
     }
 
     public int getCurrentVolume() {
@@ -42,7 +40,7 @@ public class MusicStatusController {
         if (isValidVolume(doubleVolume))
             setCurrentVolume(doubleVolume);
         else
-            setCurrentVolume(MusicConstraints.VolumeDefaultValue);
+            setCurrentVolume(MusicConstants.VolumeDefaultValue);
     }
 
     public int getCurrentInstrument() {
@@ -55,10 +53,10 @@ public class MusicStatusController {
     }
 
     private boolean isValidVolume(int volume){
-        return volume <= MusicConstraints.VolumeMaxValue && volume >= MusicConstraints.VolumeMinValue;
+        return volume <= MusicConstants.VolumeMaxValue && volume >= MusicConstants.VolumeMinValue;
     }
 
     private boolean isValidInstrument(int instrument){
-        return instrument <= MusicConstraints.InstrumentMaxCode && instrument >= MusicConstraints.InstrumentMinCode;
+        return instrument <= MusicConstants.InstrumentMaxCode && instrument >= MusicConstants.InstrumentMinCode;
     }
 }
