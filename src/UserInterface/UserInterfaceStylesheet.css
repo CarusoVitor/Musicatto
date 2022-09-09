@@ -1,0 +1,12 @@
+.interface-button{
+    -fx-background-color: #FF7759;
+    -fx-background-radius: 30px;
+}
+
+.interface-button:hover{
+    -fx-background-color: #D65C36
+}
+
+.interface-button:pressed{
+    -fx-background-color: #FFA18C
+}
