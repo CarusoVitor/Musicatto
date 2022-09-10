@@ -24,7 +24,7 @@
          </font>
       </Label>
    </Pane>
-   <TextArea fx:id="textArea" layoutX="63.0" layoutY="209.0" prefHeight="204.0" prefWidth="675.0" promptText="Insira seu texto" wrapText="true">
+   <TextArea fx:id="textArea" layoutX="63.0" layoutY="209.0" prefHeight="204.0" prefWidth="675.0" promptText="Insert text" wrapText="true">
       <font>
          <Font size="16.0" />
       </font>

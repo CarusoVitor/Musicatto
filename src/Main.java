@@ -4,7 +4,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.util.Objects;
 
 public class Main extends Application {
@@ -15,9 +14,14 @@ public class Main extends Application {
                         getClass().getResource(UserInterfaceConstants.InterfaceLayoutPath)
                 )
         );
-
         primaryStage.setTitle(UserInterfaceConstants.WindowTitle);
-        primaryStage.setScene(new Scene(root, UserInterfaceConstants.WindowWidth, UserInterfaceConstants.WindowHeight));
+        primaryStage.setScene(
+                new Scene(
+                        root,
+                        UserInterfaceConstants.WindowWidth,
+                        UserInterfaceConstants.WindowHeight)
+        );
+
         primaryStage.show();
     }
 

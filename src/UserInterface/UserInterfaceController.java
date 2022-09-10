@@ -12,7 +12,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class UserInterfaceController {
-    @FXML TextArea textArea;
+    @FXML
+    TextArea textArea;
 
     @FXML
     public void onPlayButtonClicked() {
@@ -27,7 +28,12 @@ public class UserInterfaceController {
         String musicSheet = MusicDecoder.decode(inputString);
 
         FileChooser fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("MIDI files", "*.mid"));
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter(
+                        UserInterfaceConstants.SaveFileFilterTitle,
+                        UserInterfaceConstants.SaveFileFilterExtension)
+        );
+
         File file = fileChooser.showSaveDialog(null);
         if (file != null) {
             MusicPlayer.download(musicSheet, file.getAbsolutePath());
@@ -35,9 +41,14 @@ public class UserInterfaceController {
     }
 
     @FXML
-    public void onUploadButtonClicked() throws IOException{
+    public void onUploadButtonClicked() throws IOException {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter(
+                        UserInterfaceConstants.OpenFileFilterTitle,
+                        UserInterfaceConstants.OpenFileFilterExtension)
+        );
+
         File file = fileChooser.showOpenDialog(null);
         if (file != null) {
             Path filePath = Path.of(file.getAbsolutePath());
@@ -46,5 +57,4 @@ public class UserInterfaceController {
             textArea.setText(inputStringTextArea + newInputString);
         }
     }
-
 }
