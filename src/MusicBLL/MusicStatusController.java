@@ -34,7 +34,7 @@ public class MusicStatusController {
         this.currentVolume = volume;
     }
 
-    public void DoubleVolume() {
+    public void doubleVolume() {
         int doubleVolume = getCurrentVolume() * 2;
 
         if (isValidVolume(doubleVolume))

@@ -55,13 +55,6 @@ public class MusicTokensTests {
         Assertions.assertEquals(MusicConstants.VolumeDefaultValue*2, musicStatus.getCurrentVolume());
     }
 
-//    @Test
-//    public void testResetVolumeToken(){
-//        IMusicToken volume = new VolumeToken();
-//        Assertions.assertEquals(String.format(":CE(935,%d)", MusicConstants.VolumeDefaultValue*2), volume.toMusicSheet(musicStatus));
-//        Assertions.assertEquals(MusicConstants.VolumeDefaultValue*2, musicStatus.getCurrentVolume());
-//    }
-
     @Test
     public void testIncreaseOctave(){
         IMusicToken octave = new OctaveToken();

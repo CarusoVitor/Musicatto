@@ -61,7 +61,7 @@ public class MusicTokenReader {
                 lastToken = new InstrumentToken((int) MidiDictionary.INSTRUMENT_STRING_TO_BYTE.get("CHURCH_ORGAN"));
                 return lastToken;
 
-            case "?":
+            case "?", ".":
                 lastToken = new OctaveToken();
                 return lastToken;
 
